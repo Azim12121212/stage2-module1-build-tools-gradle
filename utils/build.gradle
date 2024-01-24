@@ -3,12 +3,12 @@ plugins {
     id 'maven-publish'
 }
 
-java {
-    sourceCompatibility = 1.8
-}
-
-group 'stage2-build-tools-gradle.utils'
+group 'stage2-module1-build-tools-gradle.utils'
 version '1.0.0'
+
+java {
+    sourceCompatibility = 21
+}
 
 repositories {
     mavenCentral()
@@ -17,10 +17,9 @@ repositories {
 publishing {
     publications {
         maven(MavenPublication) {
-            group 'stage2-build-tools-gradle.utils'
+            group 'stage2-module1-build-tools-gradle.utils'
             version '1.0.0'
             artifactId 'utils'
-
             from components.java
         }
     }
@@ -28,12 +27,14 @@ publishing {
 
 dependencies {
     implementation 'org.apache.commons:commons-lang3:3.10'
+    //testImplementation group: 'junit', name: 'junit', version: '4.11'
 }
 
 jar {
     manifest {
         attributes(
-                'Implementation-Title': 'Utils',
+                'Main-Class': 'com.epam.utils.StringUtils',
+                'Implementation-Title': 'utils',
                 'Implementation-Version': version
         )
     }

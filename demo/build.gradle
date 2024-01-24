@@ -1,5 +1,5 @@
 
-group 'stage2-build-tools-gradle.demo'
+group 'demo'
 version '1.0.0'
 
 repositories {
