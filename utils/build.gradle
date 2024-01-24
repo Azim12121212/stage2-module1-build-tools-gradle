@@ -7,7 +7,7 @@ group 'stage2-module1-build-tools-gradle.utils'
 version '1.0.0'
 
 java {
-    sourceCompatibility = 21
+    sourceCompatibility = 1.8
 }
 
 repositories {
